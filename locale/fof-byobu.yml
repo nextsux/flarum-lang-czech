@@ -1,0 +1,130 @@
+fof-byobu:
+    forum:
+        badges:
+            is_private:
+                tooltip: Soukromá diskuze
+
+        buttons:
+            add_recipients: Příjemci
+            submit: OK
+            edit_recipients: Upravit příjemce
+            send_pd: "Odeslat {username} zprávu"
+            cancel: Zrušit
+            remove_from_discussion: Opustit soukromou diskuzi
+
+        composer_private_discussion:
+            submit_button: Odeslat soukromou diskuzi
+            title_placeholder: Nadpis soukromé diskuze
+
+        labels:
+            recipients: "{count, plural, one {{count} příjemce} other {{count} příjemců}}"
+
+        nav:
+            start_button: Diskutovat soukromě
+            nav_item: "Soukromé diskuze"
+
+        input:
+            search_recipients: Napiš alespoň první tři znaky pro vyhledání příjemce...
+
+        search:
+            headings:
+                groups: Skupiny oprávnění
+
+        modal:
+            titles:
+                update_recipients: Upravit příjemce {title}
+                add_recipients: Přidej příjemce do své diskuze
+
+            labels:
+                selected_users: Vybraní uživatelé
+                search_field: Vyhledat uživatele
+
+            help:
+                add_recipients: Tato diskuze bude viditelná pouze pro uživatele, které zde vybereš. Je vyžadován alespoň jeden příjemce (mimo tebe).
+                update_recipients: Tato diskuze bude viditelná uživatelům, které zde vybereš.
+                selected_users: Pro odebrání uživatele klikni na jeho jméno.
+                click_user_to_remove_tooltip: Klikni pro odstranění
+
+        post:
+            recipients_modified:
+                added_and_removed: "{username} přidal {added} a odebral {removed}."
+                added: "{username} přidal {added}."
+                removed: "{username} odebral {removed}."
+                removed_self: "{username} opustil soukromou diskuzi."
+
+        user:
+            settings:
+                block_pd: Zablokovat soukromé diskuze
+            byobu_link: Soukromé diskuze
+            dropdown_label: Soukromé diskuze
+
+        notifications:
+            pd_label: Někdo mě přidá do soukromé diskuze
+            pd_reply_label: Někdo pošle příspěvek do soukromé diskuze, kde jsem přijemcem
+            pd_reply_text: "{username} poslal příspěvek do soukromé diskuze, kde jsi členem"
+            pd_text: "{username} s tebou začal soukromou diskuzi"
+            pd_user_left_label: Uživatel opustí soukromou diskuzi, kde jsem přijemcem
+            pd_user_left_text: "{username} opustil soukromou diskuzi"
+            pd_added_text: "{username} tě přidal do soukromé diskuze"
+            pd_added_label: "Někdo mě přidal do existující soukromé diskuze"
+
+    admin:
+        permission:
+            create_private_discussions_with_users: Vytvářet soukromé diskuze s uživateli
+            create_private_discussions_with_groups: Vytvářet soukromé diskuze se skupinami
+            create_private_discussions_with_blocking_users: Vytvářet soukromé diskuze s uživateli, kteří je zablokovali
+            edit_user_recipients: Upravit uživatele účastnící se soukromé diskuze
+            edit_group_recipients: Upravit skupiny účastnící se soukromých diskuzí
+            view_private_discussions-when-flagged: Zobrazit soukromé dizkuze uživatelů, když jsou označeny
+
+        settings:
+            badge-icon: Byobu Discussion Badge
+            post-event-icon: Byobu Post Events
+
+    email:
+        subject:
+            private_discussion_created: "[Soukromá diskuze] {display_name} s tebou začal novou soukromou diskuzi"
+            private_discussion_replied: "[Soukromá diskuze] {display_name} přispěl do soukromé diskuze"
+            recipient_removed: "[Soukromá diskuze] {display_name} opustil soukromou diskuzi"
+            private_discussion_added: "[Soukromá diskuze] {display_name} tě přdal do soukromé diskuze"
+
+        body:
+            private_discussion_created: |
+                Ahoj {recipient_display_name},
+
+                {actor_display_name} s tebou začal novou soukromou diskuzi: {discussion_title}.
+
+                Zobrazit ji můžeš zde:
+                {discussion_url}
+
+                Možná se budeš muset přihlásít, aby sis mohl odkaz prohlédnout.
+
+            private_discussion_replied: |
+                Ahoj {recipient_display_name},
+
+                {actor_display_name} zaslal příspěvěk do soukromé diskuze, kde jsi přijemcem: {discussion_title}.
+
+                Zobrazit ji můžeš zde
+                {post_url}
+
+                Možná se budeš muset přihlásít, aby sis mohl odkaz prohlédnout.
+
+            recipient_removed: |
+                Ahoj {recipient_display_name},
+
+                {actor_display_name} opustil soukromou diskuzi: {discussion_title}. Už si nemůže zobrazit její obsah.
+
+                Zobrazit ji můžeš zde
+                {discussion_url}
+
+                Možná se budeš muset přihlásít, aby sis mohl odkaz prohlédnout.
+
+            private_discussion_added: |
+                Ahoj {recipient_display_name},
+
+                {actor_display_name} tě přidal do existující soukromé diskuze: {discussion_title}.
+
+                Zobrazit ji můžeš zde
+                {discussion_url}
+
+                Možná se budeš muset přihlásít, aby sis mohl odkaz prohlédnout.
