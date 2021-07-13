@@ -20,8 +20,8 @@ flarum-mentions:
       reply_to_post_text: 'Odpovědět na příspěvek č. {number}'
     notifications:
       others_text: '=> core.ref.some_others'
-      post_mentioned_text: 'Uživatel {username} odpověděl na tvůj příspěvek|Uživatelé {username} odpověděli na tvůj příspěvek'
-      user_mentioned_text: 'Uživatel {username} tě zmínil|Uživatelé {username} tě zmínili'
+      post_mentioned_text: '{count, plural, one {Uživatel {username} odpověděl na tvůj příspěvek} other {Uživatelé {username} odpověděli na tvůj příspěvek}}'
+      user_mentioned_text: '{count, plural, one {Uživatel {username} tě zmínil} other {Uživatelé {username} tě zmínili}}'
     post:
       mentioned_by_self_text: '{users} na toto odpověděli.'
       mentioned_by_text: '{users} na toto odpověděli.'
